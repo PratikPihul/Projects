@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean class="com.collections.Employee" name="emp1">
+    <property name="empName" value="Pratik"/>
+    <property name="phones">
+         <list>
+             <value>56465456564</value>
+             <value>25585463654</value>
+             <value>25585444523</value>
+         </list>
+    </property>
+   <property name="address">
+       <set>
+           <value>Dehli</value>
+           <value>Pune</value>
+           <value>Dhule</value>
+
+       </set>
+   </property>
+<property name="courses">
+    <map>
+        <entry key="Java" value="6 Months"/>
+        <entry key="Cpp" value="8 Months"/>
+        <entry key="Python" value="2 Months"/>
+    </map>
+</property>
+</bean>
+<bean class="com.collections.Employee" name="emp2">
+    <property name="empName" value="Pranav Tupe"/>
+    <property name="phones">
+        <list>
+            <value>858</value>
+            <value>747</value>
+            <value>636</value>
+        </list>
+    </property>
+   <property name="address">
+       <set>
+
+           <value>Pune</value>
+           <value>Nashik</value>
+           <value>Nagpur</value>
+       </set>
+   </property>
+
+    <property name="courses">
+        <map>
+            <entry key="JS" value="1 Months"/>
+            <entry key="Python" value="2 Months"/>
+            <entry key="React JS" value="3 Months"/>
+        </map>
+    </property>
+
+</bean>
+</beans>
