@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.springDemo1.Student" name="s1" init-method="myInit" destroy-method="myDestroy">
+        <property name="id" value="1"/>
+        <property name="name" value="Pratik Anant Pihul"/>
+        <property name="town" value="Pune"/>
+    </bean>
+<bean class="com.springLifeCycle.Player" name="p1">
+    <property name="name" value="MS Dhoni"/>
+
+</bean>
+</beans>
