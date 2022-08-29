@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+<util:list list-class="java.util.Vector" id="channels">
+    <value>CarryMinati</value>
+    <value>ASC</value>
+    <value>Harsh Beniwal</value>
+    <value>BB ki vines</value>
+    <value>WWE</value>
+</util:list>
+
+<bean class="com.standalone1.Youtube" name="yt1">
+
+     <property name="youtubeChannels">
+            <ref bean="channels"/>
+     </property>
+</bean>
+<bean class="com.standalone1.Youtube" name="yt2">
+
+     <property name="youtubeChannels">
+            <ref bean="channels"/>
+     </property>
+
+
+
+
+
+</bean>
+
+
+
+
+
+
+    </beans>

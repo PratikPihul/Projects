@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+<util:list list-class="java.util.LinkedList" id="myBff">
+ <value>Pratik</value>
+ <value>Sakshi</value>
+ <value>Gavrav</value>
+ <value>Sankalp</value>
+ <value>Payal</value>
+</util:list>
+
+    <util:map map-class="java.util.HashMap" id="myFees">
+
+        <entry key="Spring FrameWork" value="8000"/>
+        <entry key="Hibernate" value="6000"/>
+        <entry key="C++" value="5000"/>
+        <entry key="Java" value="8000"/>
+        <entry key="Python" value="7000"/>
+
+
+
+
+    </util:map>
+<util:properties id="dbConfig">
+      <prop key="driver">com.mysql.jdbc.driver</prop>
+
+
+
+
+</util:properties>
+ <bean class="com.standalone.Person" name="ps1">
+
+     <property name="friends" >
+         <ref bean="myBff"/>
+     </property>
+     <property name="fees" >
+         <ref bean="myFees"/>
+     </property>
+  <property name="properties">
+         <ref bean="dbConfig"/>
+          </property>
+ </bean>
+
+
+
+</beans>
